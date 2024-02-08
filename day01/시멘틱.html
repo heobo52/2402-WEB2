@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    문서구조에 포함됨 : header / footer
+    <header> - 홈이나 전체 메뉴(네비게이션)이 포함됨.
+        웹문서의 머릿글
+        페이지의 상단부분
+    </header>
+
+    <footer> - 연락처나 사이트맵등 다양한 정보가 포함됨.
+        웹문서의 바닥글
+        페이지의 하단부분
+    </footer>
+-------------------------
+    <main>
+        메인내용을 담는 태그
+        문서에 한번만 사용가능
+        의미론적으로 봤을 때 최상단에 위치해야하는 태그 / 최상단에 위치(body의 자식으로 들어감) / ☆ header안에 넣으면 안됨.
+    </main>
+
+    <section>
+        컨텐츠의 그룹을 분리하는 태그
+        (꼭) 제목 태그가 하나 이상 포함되어 있어야 함.(없으면 웹표준 검사시 엘로우 카드)
+    </section>
+
+    <nav>
+        웹페이지의 메뉴등 링크들이 들어가는 태그
+        의미를 부여하기 위해서 ul태그를 감싸는 경우도 많다.
+
+        <nav>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </nav>
+         ↑
+         구조적으로 봤을 때는
+         nav와 ul이 박스 역할을 하기 때문에 무의미한 중첩 구조일 수 있지만 의미론적으로는 유효한 작성이다.
+    </nav>
+
+    <article>
+        신문기사, 인스타 피드라고 생각하면 됨
+        section(내용영역/그룹)안에 article은 독립적인 세부영역/컨텐츠를 하나하나 나누기 적합한 태그
+        section > article  / article > section -> 둘 다 가능
+    </article>
+
+    <aside>
+        본문 내용과 관련이 없는 내용들을 배치하는 태그(ex.광고)
+    </aside>
+
+
+</body>
+</html>
