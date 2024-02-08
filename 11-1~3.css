@@ -2,5 +2,18 @@ header {
     width: 1000px;
     height: 300px;
     padding: 8px;
-    border: 1px; solid #222
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    width: 200px;
+    height: 200px;
+    background-color: yellowgreen;
+}
+
+.meun-container {
+    display: block;
+    
 }
