@@ -1,0 +1,111 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+    height: 100px;
+    margin: 10px auto;
+    border: 1px solid black
+}
+
+h1 {
+    width: 250px;
+    height: 100px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+nav {
+    width: 250px;
+    height: 100px;
+    background-color: pink;
+    display: block;
+}
+
+
+.menu-container {
+    width: 250px;
+    height: calc(100px/3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: orange;
+}
+
+
+.meun-content {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+div {
+    width: 1000px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-centainer {
+    display: block;
+}
+
+.article-content {
+    width: 750px;
+    height: 130px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    padding: 15px;
+    line-height: 150%;
+}
+
+.article-content>h2 {
+    width: 700px;
+    height: 25px;
+    background-color: pink;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+aside {
+    width: 250px;
+    height: 300px;
+    border: 1px solid black;
+    /* background-color: blue; */
+    box-sizing: border-box;
+    margin-left: 5px;
+    padding: 15px;
+    line-height: 150%;
+}
+
+aside>h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.aside-inner-box {
+    width: 200px;
+    height: 50px;
+    background-color: gray;
+    display: block;
+}
+
+.aside-inner-box>h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer {
+    width: 1000px;
+    height: 30px;
+    border: 1px solid black;
+    background-color: pink;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
