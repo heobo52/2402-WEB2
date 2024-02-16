@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 60%;
+            aspect-ratio: 1;
+            position: absolute;
+        }
+
+        .box1 {
+            background-color: pink;
+            left: 50px;
+            top: 50px;
+
+            /* position으로 겹쳐진 컨텐츠의 높낮이 설정가능 */
+            /* 값은 되도록 널널하게 사용해 유지보수 편의성을 높이는 것이 좋다. */
+            /* position의 부수속성을 잊으면 안됨. / sticky를 사용했을 때에는 속성 적용이 안 먹힘!(중요) */
+            /* ↓ */
+            z-index: 100;
+        }
+
+        .box2 {
+            background-color: cadetblue;
+            right: 50px;
+            bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">1번박스</div>
+    <div class="box box2">2번박스</div>
+</body>
+</html>
