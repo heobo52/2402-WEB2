@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .dice {
+            width: 100px;
+            height: 100px;
+
+            position: relative;
+            transform-style: preserve-3d;
+
+            transform: rotateY(66deg);
+
+            /* rotate, translate를 활용하여 정육면체를 만들어보기~ */
+            /* 위에 rotate를 조절하면 모양 확인 가능 */
+
+        }
+
+        .dice-side {
+            width: 100%;
+            height: 100%;
+
+            font-size: 36px;
+            font-weight: bold;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: #00000020;
+            border-radius: 8px;
+
+            position: absolute;
+            top: 0;
+        }
+
+        .sid1 {
+            transform: translateZ(50px);
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- div.dice-side.sid${$}*6 -->
+    <!-- transform css 작성시 화합 안됨 마지막 작성된게 우선순위 적용됨. -->
+    <div class="dice">
+        <div class="dice-side sid1">1</div>
+        <div class="dice-side sid2">2</div>
+        <div class="dice-side sid3">3</div>
+        <div class="dice-side sid4">4</div>
+        <div class="dice-side sid5">5</div>
+        <div class="dice-side sid6">6</div>
+    </div>
+
+</body>
+</html>
