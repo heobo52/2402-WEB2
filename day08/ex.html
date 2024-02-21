@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: relative;
+
+            width: 500px;
+            height: 500px;
+            background-color: rgb(139, 135, 135)
+        }
+
+        .animation-container {
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(50%, 50%);
+
+            width: 50px;
+            height: 50px;
+            background-color: pink
+        }
+
+        .roading {
+            width: 100%;
+            height: 100%;
+
+            border: 6px solid wheat;
+            border-top-color: red;
+            border-radius: 100%;
+
+            box-sizing: border-box;
+
+            animation: roading 1s infinite;
+        }
+
+        @keyframes {
+            from {
+                transform: rotate(0)
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="animation-container">
+        <div class="roading"></div>    
+        </div>
+    </div>
+</body>
+</html>
