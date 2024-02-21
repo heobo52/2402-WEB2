@@ -15,62 +15,61 @@
             height: 500px;
             background-color: gray;
 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
             position: relative;
 
         }
 
         .animation-container {
-            width: 60px;
-            height: 60px;
-
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50% );
+            width: 80px;
+            height: 80px;
 
             position: absolute;
-
-
+            
         }
 
-        .contents-box {
+        .contents1 {
             width: 100%;
             height: 100%;
-            background-color: white;
 
+            background-color: white;
             border-radius: 50%;
 
-            animation: contents-box 3s infinite;
+            box-sizing: border-box;
+
+            animation: 변환 3s infinite;
+            animation-delay: 1.5s;
         }
 
+ 
+
+        
 
 
-
-
-        @keyframes contents-box{
-
+        @keyframes 변환 {
             from {
-                opacity: 0%;
-                width: 100%
-                height: 100
+                opacity: 0;
             }
 
-            to {
-                opacity: 100%;
-                width: 0%;
-                height: 0%;
+            50% {
+                opacity: 50%;
+            }
 
+           to {
+            opacity: 100%;
             }
         }
-
-
     </style>
 </head>
 <body>
     <div class="container">
         <div class="animation-container">
-            <div class="contents-box1"></div>
-            <div class="contents-box2"></div>
-            <div class="contents-box3"></div>
+            <div class="contents1"></div>
+            <div class="contents2"></div>
+            <div class="contents3"></div>
         </div>
     </div>
 </body>
