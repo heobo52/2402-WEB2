@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: relative;
+
+            width: 500px;
+            height: 500px;
+            background-color: gray
+        }
+
+        .animation-container {
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 150px;
+            aspect-ratio: 3/5;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="animation-container">
+            <div class="box left-top-down"></div>
+            <div class="box left-ri"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- 애니메이션을 만들 때에는 크기를 변경할 것인지 고민 필수 -->

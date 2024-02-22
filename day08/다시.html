@@ -11,27 +11,28 @@
         }
 
         .container {
-            width: 500px;
-            height: 500px;
-            background-color: gray;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
             position: relative;
 
+            width: 500px;
+            height: 500px;
+            background-color: gray
         }
 
         .animation-container {
-            width: 80px;
-            height: 80px;
-
             position: absolute;
-            
-        }
 
-        .contents1 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 100px;
+            /* height: 100px; */
+            aspect-ratio: 1;
+
+        }
+        
+
+        .raider {
             width: 100%;
             height: 100%;
 
@@ -40,36 +41,40 @@
 
             box-sizing: border-box;
 
-            animation: 변환 3s infinite;
-            animation-delay: 1.5s;
+            animation: find 2s infinite;
+
+            opacity: 1;
+            transform: scale(0);
+            position: absolute;
         }
 
- 
-
-        
-
-
-        @keyframes 변환 {
-            from {
-                opacity: 0;
-            }
-
-            50% {
-                opacity: 50%;
-            }
-
-           to {
-            opacity: 100%;
-            }
+        .raider:nth-child(2) {
+            animation-delay: 0.2s;
         }
+
+        .raider:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+            @keyframes find {
+                from {
+                    opacity: 1;
+                    transform: scale(0);
+                }
+
+                to  {
+                    opacity: 0;
+                    transform: scale(1);
+                }
+            }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="animation-container">
-            <div class="contents1"></div>
-            <div class="contents2"></div>
-            <div class="contents3"></div>
+            <div class="raider"></div>
+            <div class="raider"></div>
+            <div class="raider"></div>
         </div>
     </div>
 </body>

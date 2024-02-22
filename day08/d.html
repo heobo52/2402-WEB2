@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container { 
+            width: 500px;
+            height: 500px;
+            background-color: gray
+        }
+
+        .animation-container {
+            position: relative;
+
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 20px;
+            height: 40px;
+        }
+        
+
+        .mouse {
+            position: relative;
+
+            width: 100%;
+            /* width는 상위 부모의 크기를 종속 시키는게 좋기 때문에 % 설정하는 것이 좋음 */
+            height: 30px;
+
+            box-sizing: border-box;
+
+            border: 2px solid white;
+            border-radius: 12px;
+            /* width와 height의 길이가 다를 경우 width의 절반 값을 px로 주면 됨.  */
+
+            animation: mouse-down 2s infinite;
+        }
+
+        .wheel {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: white;
+
+            position: absolute;
+            
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 25%;
+
+            animation: wheel-down 2s infinite;
+        }
+
+        /* wheel-down과 mouse-down은 같이 움직여야하기 때문에 지속 시간을 맞춰줘야함(2s) */
+
+        @keyframes wheel-down {
+            /* 휠이 위에 있다가 아래로 내려오는 움직임 */
+           /* 0%~33% 구간, 66%~100% 구간은 각각 같은 크기를 유지해야하기 때문에 같은 값 설정 */
+
+            0% {
+                top: 25%;
+            }
+
+            33% {
+                top: 25%;
+            }
+
+            66% {
+                top: 75%;
+            }
+
+            100% {
+                top: 75%;
+            }
+        }
+
+        @keyframes mouse-down {
+            0% {
+                top: 0px;
+                opacity: 0;
+                transform: scale(0);
+            }
+            /* 투명하고 작은상태, 위에 있음 */
+
+            33% {
+                top: 0px;
+                opacity: 1;
+                transform: scale(1);
+            }
+            /* 불투명하고 큰상태, 위에 있음 */
+
+            66% {
+                top: 10px;
+                opacity: 1;
+            }
+            /* 불투명하고 큰상태, 아래 있음 */
+
+            100% {
+                top: 10px;
+                opacity: 0;
+            /* 투명하고 아래있음 */
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="animation-container">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
