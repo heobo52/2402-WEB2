@@ -28,7 +28,9 @@
             width: 150px;
             /* height: 250px; */
             aspect-ratio: 3/5;
-            background-color: #444;
+            /* background-color: #444; */
+
+            overflow: hidden;
 
             position: relative;
         }
@@ -41,15 +43,20 @@
         .ver-line {
             width: 50px;
             height: 250px;
+
+            animation: top-down 3s infinite;
         }
 
         .hor-line {
             width: 150px;
             height: 50px;
+
+            animation: left-right 3s infinite;
         }
 
         .top {
             top: 0;
+
         }
         
         .left{
@@ -69,6 +76,34 @@
             left: 0;
             transform: translateY(-50%);
         }
+
+        .line1 {
+            transition-delay: 0.5s;
+        }
+
+        .line2 {
+            transition-delay: 1s;
+        }
+
+        @keyframes top-down {
+            0% {
+                transform: translateY(0)
+            }
+
+            100% {
+                transform: translateY(100%)
+            }
+        }
+
+        @keyframes left-right {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
     </style>
 </head>
 <body>
@@ -78,10 +113,13 @@
             <div class="line1 line ver-line left"></div>
             <div class="line2 line hor-line center"></div>
             <div class="line3 line ver-line right"></div>
-
-            
         </div>
     </div>
+
+    <!-- 1) 안보이는 상태, 위에 배치 -->
+    <!-- left-box가 아래로 길어짐 -->
+    <!-- center-box가 right로 길어짐 -->
+    <!-- right가 아래로 길어짐 -->
     
 </body>
 </html>
