@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            padding: 0 32px;
+        }
+
+        section.full-screen-section {
+            padding: 0;
+        }
+
+        .full-screen-section > .section-container {
+            max-width: none;
+        }
+
+        .section-container {
+            max-width: 1280px;
+            /* width: 100%(기본값) */
+            margin: 0 auto;
+        }
+
+        .contants-box {
+            width: 200px;
+            height: 200px;
+            background-color: antiquewhite;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /* 799px보다 작아지면 모바일로 */
+        @media screen and (max-width:799px) {
+            section {
+                padding: 0 16px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>헤더</header>
+    <section class="full-screen-section">
+        <div class="section-container">
+            <div class="contants-box">
+                <h2>제목영역</h2>
+                <h3>소제목영역</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et fugiat voluptas porro atque, optio quos, omnis nihil suscipit esse facere ab neque. Error facilis odio modi veniam sint. Fugiat, officiis?</p>
+            </div>
+        </div>
+    </section>
+    <footer>푸터</footer>
+</body>
+</html>

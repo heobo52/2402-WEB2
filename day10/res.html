@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            /* 32px인 경우 테블릿 여백 크기 / 모바일은 16, 20px */
+            padding: 0 32px;
+            background-color: pink;
+        }
+
+        .section-container {
+            max-width: 1280px;
+            /* width: 100%(기본값=최대한 늘어나려고 함) */
+            /*  */
+            margin: 0 auto;
+            background-color: orange;
+
+            height: 500px;
+            /* 임시높이, 원래는 넣으면 안됨*/
+        }
+
+        .full-screen-section {
+            padding: 0;
+        }
+
+        .full-screen-section > .section-container {
+            max-width: none;
+        }
+
+
+        /* 799px보다 작아지면 모바일로 */
+        @media screen and (max-width: 799px) {
+            .section {
+                padding: 0 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <section class="full-screen-section">
+        <div class="section-container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus temporibus aliquid ipsam ratione! Nemo officia porro, optio sit pariatur nihil ex voluptate cumque placeat id quisquam. Repudiandae esse ducimus nulla.</div>
+    </section>
+    <footer></footer>
+
+    <header></header>
+    <section>
+        <div class="section-container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus temporibus aliquid ipsam ratione! Nemo officia porro, optio sit pariatur nihil ex voluptate cumque placeat id quisquam. Repudiandae esse ducimus nulla.</div>
+    </section>
+    <footer></footer>
+</body>
+</html>
