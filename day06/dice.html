@@ -22,8 +22,8 @@
             position: relative;
             transform-style: preserve-3d;
 
-            transform: rotateY(360deg); 
-        }
+            transform: rotateY(45deg);
+            animation: dice-roll 2s linear infinite;        }
 
         .dice-side {
             width: 100%;
@@ -73,6 +73,17 @@
             top: 50px;
             transform: rotatex(90deg)
         }
+
+        @keyframes dice-roll {
+            from {
+                transform: rotate3d(1, 1, 1, 0deg);
+            }
+    
+            to {
+                transform: rotate3d(1, 1, 1, 360deg);
+            }
+        }
+        
     </style>
     
 </head>
