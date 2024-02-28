@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../rest.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+                }
+        
+                
+         main {
+            background-image: url(main-background.png);
+            background-size: cover;
+            height: 400px;
+            padding: 0 32px;
+         }
+
+        .main-container {
+            max-width: 500px;
+            height: 100%;
+            margin: 0 auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            gap: 56px;
+        }
+
+        main h1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: white
+        }
+
+        .search-container {
+            position: relative;
+        }
+
+        .search-icon {
+            position: absolute;
+
+            transform: translate(50%, 50%);
+        }
+
+
+        /* .search-container{
+            position: relative;
+            width: 100%;
+        }
+
+        .search-icon {
+            transform:translate(-50%,-50%);
+            top: 50%;
+            left: 20px;
+            position: absolute;
+        }
+
+        .search-icon * {
+            stroke: gray;
+        }
+
+        .search-container > input {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            padding-left: 36px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        .search-container > input:focus{
+            outline-style: solid;
+            outline-color: blue;
+            outline-width: 2px;
+        } */
+
+    </style>
+</head>
+<body>     
+    <main>
+        <div class="main-container">
+            <h1>고객 지원 센터</h1>
+           <div class="search-container">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-iconb" aria-hidden="true">
+                <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"></circle>
+                <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"></path>
+              </svg>
+            <input type="search" placeholder="검색">
+           </div> 
+        </div>
+    </main>
+</body>
+</html>
