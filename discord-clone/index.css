@@ -1,0 +1,93 @@
+/* 이거 중요함 유지보수할 때 ↓ / color:--입력해서 정해진 컬러 사용하면 유지보수에 편함*/
+:root {
+    --main-color : #5865f2;
+}
+
+/* 이거 까먹지 말자...↓ header padding으로 여백설정 */
+header {
+    padding: 0 48px;
+
+    height: 64px;
+}
+
+.header-container {
+    margin: 0 auto;
+    max-width: 1160px;
+    /* header의 크기를 따라갈 수 있도록해야 함 */
+    height: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container nav {
+    display: flex;
+
+    gap: 16px;
+}
+
+.header-container ul {
+    display: flex;
+
+    gap: 16px;
+}
+
+.header-container a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.header-container a:hover {
+    text-decoration: underline;
+}
+
+.lang-select {
+    display: flex;
+    /* align-items 는 위아래 정렬 속성 */
+    align-items: center;
+
+    /* ↓ 한국어와 모양 사이 갭 */
+    gap: 4px;
+}
+
+.lang-select::after {
+    /* after 사용시 필수 속성 2가지 / content, display:block */
+    content: '';
+    display: block;
+
+    width: 4px;
+    height: 4px;
+
+    border: 1px solid var(--main-color);
+
+    transform: rotate(45deg);
+
+    border-top: none;
+    border-left: none;
+}
+
+.hamberger-button {
+    /* transparent:투명색을 만드는 속성 */
+    background-color: transparent;
+
+    border: none;
+    color: var(--main-color);
+
+    /* 일단 기본적으로 안 보이고 작아졌을 때 보여야함. */
+    display: none;
+}
+
+/* 799px일 때 변경될 수 있도록 함.*/
+@media screen and (max-width:799px) {
+    .hamberger-button {
+        /* 위쪽에  hamberger-button을 none처리 해놨기 때문에 보일 수 있도록 블럭 처리 */
+        display: block;
+    }
+    
+    .header-container ul {
+        display: none;
+    }
+}
