@@ -81,6 +81,183 @@ header {
     display: none;
 }
 
+main {
+    background-image: url(main-background.png);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+
+    padding: 0 32px;
+}
+
+.main-container {
+    margin: 0 auto;
+    max-width: 700px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 40px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+}
+
+.search-container > input {
+
+    display: block;
+    width: 100%;
+
+    /* padding을 넣으면 크기가 커짐. / */
+    padding: 8px;
+    padding-left: 32px;
+
+    border: none;
+    border-radius: 8px;
+
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+
+    color: gray;
+}
+
+/* search-icon은 input과 형제이기 때문에 search-container를 input과 같게 만든 후 position 적용 */
+.search-icon {
+    position: absolute;
+
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+}
+
+/* section 한테 줘야함 padding */
+section {
+    padding: 0 32px;
+}
+
+/* id 선택 좌는 #으로!!!!!!!!!!! */
+#help-main{
+    text-align: center;
+
+}
+
+.section-container {
+    /* 여백은 항상 색을 넣었을 때 깔끔하게 들어가는지 생각하고 작성 */
+    padding-top: 64px;
+
+}
+
+#help-main h2 {
+    font-size: 32px;
+    font-weight: bold;
+
+    margin-bottom: 24px;
+}
+
+.links {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.links:hover {
+    text-decoration: underline;
+}
+
+.help-contents-wrapper {
+    display: flex;
+
+    /* flex-wrap은 넘치면 줄 바꿈 해주는 태그 */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+
+    /* 원래는 html에서 h2,p를 한번 묶어 margin-buttom으로 주는게 젤 좋긴함! 흐름에 맞춰서 */
+    margin-top: 48px;
+}
+
+.help-content {
+    width: 240px;
+    height: 260px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.help-content:hover {
+    background-color: #eee;
+}
+
+/* ↓ content 어딜 눌러도 눌릴 수 있도록 / 기존 서식 초기화는 a태그에 none 처리해야함.*/
+.help-content>a {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    padding: 12px;
+    box-sizing: border-box;
+
+    text-decoration: none;
+}
+
+.help-content-img {
+    width: 106px;
+}
+
+.content-heading {    
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--main-color);
+
+    /* after 가운데로  */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* after는 태그 안 뒷쪽에 생김(공지사항 뒷쪽에 생긴거임) */
+.content-heading::after {
+    content: '';
+    display: block;
+
+    width: 80px;
+    height: 1px;
+    background-color: #ccc;
+
+    /* after에 위 아래 여백을 만들어 줌 */
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.content-explane {
+    color: #222;
+    font-size: 14px;
+}
+
+#more-help {
+    text-align: center;
+}
+
+#more-help h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.help-content.diff {
+    width: 260px; 
+}
+
+
+
 /* 799px일 때 변경될 수 있도록 함.*/
 @media screen and (max-width:799px) {
     .hamberger-button {
