@@ -4,6 +4,15 @@
     --main-color : #5865f2;
 }
 
+img {
+    width: 100%;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+}
+
 /* 이거 까먹지 말자...↓ header padding으로 여백설정 */
 header {
     padding: 0 48px;
@@ -197,7 +206,7 @@ section {
 }
 
 /* ↓ content 어딜 눌러도 눌릴 수 있도록 / 기존 서식 초기화는 a태그에 none 처리해야함.*/
-.help-content>a {
+.help-content > a {
     width: 100%;
     height: 100%;
 
@@ -211,6 +220,7 @@ section {
 
 .help-content-img {
     width: 106px;
+    margin: 0 auto;
 }
 
 .content-heading {    
@@ -245,6 +255,7 @@ section {
 
 #more-help {
     text-align: center;
+    margin-bottom: 100px;
 }
 
 #more-help h2 {
@@ -255,6 +266,188 @@ section {
 .help-content.diff {
     width: 260px; 
 }
+
+footer {
+    background-color: #121315;
+}
+
+.footer-container{
+    margin: 0 auto;
+    max-width: 1000px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-more {
+    /* display:flex;로 정렬해도 됨 */
+    /* button이 inline-block 속성으로 text-align 속성이 적용됨 */
+    text-align: center;    
+    padding: 48px;
+}
+
+.footer-more > button {
+    background-color: #3ba55c;
+
+    width: 250px;
+    height: 40px;
+
+    border: none;
+    /* border-redius는 높이의 절반 값을 주면 됨.*/
+    border-radius: 20px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.footer-devices {
+    position: relative;
+
+    width: 1000px;
+
+    border-bottom: 1px solid #353535;
+}
+
+.footer-devices > img {
+    /* 위에 img width를 100%로 설정해줬기 때문에 auto 설정 작성으로 초기화 시켜줘야함. */
+    width: auto;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.icons {
+    position: absolute;
+    /* width, height가 먹히는 이유는 absolute 속성이 들어갔기 때문임*/
+    /* absolute가 아닐 경우 height 속성은 먹히지 않는다 왜냐 자식이 커지고 그걸 본 부모도 커지면서 계속 크기가 커지기 때문 */
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+}
+
+.icons img {
+    /* icon 넓이가 다른게 있어서 높이 값으로 맞춤 */
+    height: 56px;
+    opacity: 0.5;
+
+    transition: 0.2s;
+    
+    position: absolute;
+    top: 68px;
+
+    width: auto;
+}
+
+.icon-borowsers {
+    left: 180px;
+}
+
+.icon-apple {
+    left: 560px;
+}
+
+.icon-android {
+    left: 470px;
+}
+
+.icon-window {
+    left: 690px;
+}
+
+.icon-mac {
+    left: 780px;
+}
+
+.icons img:hover {
+    opacity: 1;
+}
+
+.footer-nav-container {
+    display: flex;
+    
+    gap: 200px;
+
+    padding: 32px 32px;
+    padding-bottom: 48px;
+
+    width: 100%;
+}
+
+footer {
+    overflow: hidden;
+}
+
+.footer-logo-container {
+    width: 150px;
+    
+}
+
+.footer-nav {
+    display: flex;
+    /* width 100%를 줄 경우 로고 사이즈에도 영향을 받음 */
+    /* 이럴 경우 footer-nav-container에 flex-shrink:0으로 해줘야함 */
+    flex-grow: 1;
+}
+
+.footer-nav > ul {
+    width: 100%;
+    /* width:100% 와 flex-gro: 1 속성모두 가능 */
+    /* flex-grow: 1; */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-nav-sign {
+    color: #666;
+    font-size: 12px;
+}
+
+.footer-nav-ex {
+    color: green;
+    font-size: 14px;
+}
+
+#help {
+    right: 16px;
+    bottom: 8px;
+    padding: 0;
+    position: fixed
+    /* fixed */
+}
+
+#help > button {
+    background-color: var(--main-color);
+
+    width: 120px;
+    height: 40px;
+
+    border: none;
+    border-radius: 20px; 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    /* button 안에 있는 글씨와 svg 사이 여백 설정 */
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold
+}
+
 
 
 
