@@ -1,0 +1,267 @@
+:root {
+    --main-color : #21c531;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+header {
+    height: 70px;
+    padding: 0 16px;
+    background-color: #f6f8fa;
+
+    padding-bottom: 40px;
+}
+
+.header-container {
+    height: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-button-container {
+    display: flex;
+    align-items: center;
+
+    gap: 24px;
+}
+
+.header-button-container>a{
+    text-decoration: none;
+
+    font-size: 14px;
+    color: #222;
+}
+
+.lang-button{
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    border: none;
+    background-color: transparent;
+
+    font-size: 14px;
+}
+
+.lang-button::after {
+    content: '';
+    display: block;
+
+    width: 3px;
+    height: 3px;
+    
+    border: 2px solid #222;
+    border-left: none;
+    border-top: none;
+
+    transform: rotate(45deg)
+}
+
+.lang-button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.header-button-container .underline:hover {
+    text-decoration: underline;
+}
+
+.normal-btn{
+    width: 90px;
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #ebebeb;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.green-bth {
+    /* 색깔이 적용 안 됨 */
+    background-color: var(--main-color);
+}
+
+.login {
+    font-size: 16px;
+    font-weight: bold;
+    /* 폰트 색상이 안 먹음 */
+}
+
+#cover{
+    height: 800px;
+    padding: 0 32px;
+
+    background-color:#f6f8fa;
+
+    display: flex;
+    justify-content: center;
+}
+
+#cover .section-container{
+    display: flex;
+    align-items: center;
+
+    gap: 48px;
+}
+
+.cover-img {
+    width: 600px;
+}
+
+.cover-contents-container{
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.cover-contents-container h2{
+     font-size: 48px;
+     line-height: 60px;
+}
+
+.cover-button{
+    text-decoration: none;
+    width: 350px;
+    height: 60px;
+}
+
+.green-btn{
+    background-color: var(--main-color);
+    color: white;
+}
+
+#cover .subtitle{
+   padding: 16px 0;
+}
+
+.white-btn{
+    background-color: white;
+    margin-bottom: 32px;
+}
+
+.cover-contents-container ul {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.cover-help-link{
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+#intro{
+    background-image: url(bg_intro.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+
+    padding: 0 32px;
+}
+
+#intro .section-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 32px;
+}
+
+#intro .subtitle{
+    text-align: center;
+    color: white;
+
+    line-height: 26px;
+}
+
+#intro .section-container h2{
+    font-size: 40px;
+    color: white;
+}
+
+#introduction {
+    height: 450px;
+    width: 1050px;
+    margin: 0 auto;
+}
+
+#introduction .section-container{
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.introduce-list-container{
+    display: flex;
+
+    gap: 32px;
+}
+
+
+.introduce-list-img {
+    margin-bottom: 20px;
+    width: 100%
+}
+
+.introduce-list-heading{
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.introduce-list-p{
+    line-height: 26px;
+    font-size: 15px;
+}
+
+#recommend {
+    height: 800px;
+    width: 1050px;
+    margin: 0 auto;
+}
+
+#recommend .section-container {
+    height: 100%;
+}
+
+#recommend .section-header{
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 32px;
+}
+
+#recommend .section-header a {
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#recommend .section-header h2 {
+    font-size: 24px;
+}
+
+
+
+.recommend-band-thumb {
+    width: 100px;
+    height: 100px;
+}
