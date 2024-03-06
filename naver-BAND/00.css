@@ -1,0 +1,35 @@
+img {
+    display: block;
+    width: 100%;
+}
+
+.hide-text {
+    /* 공식처럼 사용 */
+    /* visibility:hidden; = opacity: 0; 적합한 속성은 아님*/
+    position: absolute;
+    /* 서로 양끝으로 숨기는 속성 */
+    /* 내가 원하는 크기의 사각형을 만들어 주는 함수 → rect(위(y), 오른쪽(x), 아래(y), 왼쪽(x)) */
+    clip: rect(1px, 1px, 1px, 1px);
+    /* inset(위, 오른쪽, 아래, 왼쪽)  */
+    clip-path: inset(0 0 99.9% 99.9%);
+    /* 100%까지 사라지니까.. */
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+}
+
+.logo-img {
+    background: url('spr_intro.png') no-repeat 0 -98px;
+    width: 78px;
+    height: 29px;
+    display: block;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+/* img 는 기본적으로 inline-block 그래서 여백이 생김 */
+/* img/ button -> inline-block 구분할 것 */

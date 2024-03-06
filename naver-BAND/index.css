@@ -26,6 +26,7 @@ header {
 
 .header-button-container {
     display: flex;
+    /* align-items의 기본값은 스테치로 늘어나는 속성 */
     align-items: center;
 
     gap: 24px;
@@ -53,7 +54,7 @@ header {
 .lang-button::after {
     content: '';
     display: block;
-
+    /* width , height가 있으면 안됌 */
     width: 3px;
     height: 3px;
     
